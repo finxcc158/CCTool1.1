@@ -1,0 +1,480 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <RuntimeIdentifier>win10-x64</RuntimeIdentifier>
+    <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
+    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+    <NoWarn>CA1416</NoWarn>
+    <UseWindowsForms>true</UseWindowsForms>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="Data\Village\村规空库\**" />
+    <EmbeddedResource Remove="Data\Village\村规空库\**" />
+    <None Remove="Data\Village\村规空库\**" />
+    <Page Remove="Data\Village\村规空库\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Scripts\UI\ProButton\StatisticsButton.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Config.daml" />
+    <Content Include="Data\Images\AddFields16.png" />
+    <Content Include="Data\Images\AddFields32.png" />
+    <Content Include="Data\Images\AddInDesktop16.png" />
+    <Content Include="Data\Images\AddInDesktop32.png" />
+    <Content Include="Data\Images\Adjustment16.png" />
+    <Content Include="Data\Images\Adjustment32.png" />
+    <Content Include="Data\Images\AttributeMapper16.png" />
+    <Content Include="Data\Images\AttributeMapper32.png" />
+    <Content Include="Data\Images\BoundaryPoint16.png" />
+    <Content Include="Data\Images\BoundaryPoint32.png" />
+    <Content Include="Data\Images\bug16.png" />
+    <Content Include="Data\Images\bug32.png" />
+    <Content Include="Data\Images\Cave16.png" />
+    <Content Include="Data\Images\Cave32.png" />
+    <Content Include="Data\Images\CCTool16.png" />
+    <Content Include="Data\Images\CCTool32.png" />
+    <Content Include="Data\Images\Check16.png" />
+    <Content Include="Data\Images\Check32.png" />
+    <Content Include="Data\Images\CheckGeometry16.png" />
+    <Content Include="Data\Images\CheckGeometry32.png" />
+    <Content Include="Data\Images\ClearZM16.png" />
+    <Content Include="Data\Images\ClearZM32.png" />
+    <Content Include="Data\Images\Clipgdb16.png" />
+    <Content Include="Data\Images\Clipgdb32.png" />
+    <Content Include="Data\Images\Domain16.png" />
+    <Content Include="Data\Images\Domain32.png" />
+    <Content Include="Data\Images\EditingEditShape16.png" />
+    <Content Include="Data\Images\EditingEditShape32.png" />
+    <Content Include="Data\Images\EffectsDim16.png" />
+    <Content Include="Data\Images\EffectsDim32.png" />
+    <Content Include="Data\Images\ElementLine16.png" />
+    <Content Include="Data\Images\ElementLine32.png" />
+    <Content Include="Data\Images\ElementSplinedText16.png" />
+    <Content Include="Data\Images\ElementSplinedText32.png" />
+    <Content Include="Data\Images\Excel16.png" />
+    <Content Include="Data\Images\Excel32.png" />
+    <Content Include="Data\Images\Extent16.png" />
+    <Content Include="Data\Images\Extent32.png" />
+    <Content Include="Data\Images\FieldCalculation16.png" />
+    <Content Include="Data\Images\FieldCalculation32.png" />
+    <Content Include="Data\Images\FolderOpen16.png" />
+    <Content Include="Data\Images\FolderOpen32.png" />
+    <Content Include="Data\Images\FolderWithGISDataNew16.png" />
+    <Content Include="Data\Images\FolderWithGISDataNew32.png" />
+    <Content Include="Data\Images\Function16.png" />
+    <Content Include="Data\Images\Function32.png" />
+    <Content Include="Data\Images\GenericEraser16.png" />
+    <Content Include="Data\Images\GenericEraser32.png" />
+    <Content Include="Data\Images\GenericFlash16.png" />
+    <Content Include="Data\Images\GenericFlash32.png" />
+    <Content Include="Data\Images\GenericFlowChart16.png" />
+    <Content Include="Data\Images\GenericFlowChart32.png" />
+    <Content Include="Data\Images\GenericMessage16.png" />
+    <Content Include="Data\Images\GenericMessage32.png" />
+    <Content Include="Data\Images\GenericTag16.png" />
+    <Content Include="Data\Images\GenericTag32.png" />
+    <Content Include="Data\Images\GenericWorkflowColor16.png" />
+    <Content Include="Data\Images\GenericWorkflowColor32.png" />
+    <Content Include="Data\Images\GenericWrench_B16.png" />
+    <Content Include="Data\Images\GenericWrench_B32.png" />
+    <Content Include="Data\Images\GeodatabaseAddNew16.png" />
+    <Content Include="Data\Images\GeodatabaseAddNew32.png" />
+    <Content Include="Data\Images\GeometricNetworkDisconnect16.png" />
+    <Content Include="Data\Images\GeometricNetworkDisconnect32.png" />
+    <Content Include="Data\Images\GeostatisticalSurface16.png" />
+    <Content Include="Data\Images\GeostatisticalSurface32.png" />
+    <Content Include="Data\Images\GetInfomation.png" />
+    <Content Include="Data\Images\go16.png" />
+    <Content Include="Data\Images\go32.png" />
+    <Content Include="Data\Images\GraphManage16.png" />
+    <Content Include="Data\Images\GraphManage32.png" />
+    <Content Include="Data\Images\GroupLayer32.png" />
+    <Content Include="Data\Images\GroupLayer16.png" />
+    <Content Include="Data\Images\HostedServicesFolder16.png" />
+    <Content Include="Data\Images\HostedServicesFolder32.png" />
+    <Content Include="Data\Images\ItemInformation16.png" />
+    <Content Include="Data\Images\ItemInformation32.png" />
+    <Content Include="Data\Images\LasDatasetPoints16.png" />
+    <Content Include="Data\Images\LasDatasetPoints32.png" />
+    <Content Include="Data\Images\LayerProperties16.png" />
+    <Content Include="Data\Images\LayerProperties32.png" />
+    <Content Include="Data\Images\MapTiled16.png" />
+    <Content Include="Data\Images\MapTiled32.png" />
+    <Content Include="Data\Images\mdb2gdb16.png" />
+    <Content Include="Data\Images\mdb2gdb32.png" />
+    <Content Include="Data\Images\MergeSHP16.png" />
+    <Content Include="Data\Images\MergeSHP32.png" />
+    <Content Include="Data\Images\ElementEditVertices16.png" />
+    <Content Include="Data\Images\ElementEditVertices32.png" />
+    <Content Include="Data\Images\QRCode16.png" />
+    <Content Include="Data\Images\QRCode32.png" />
+    <Content Include="Data\Images\RasterImageAnalysisNDVI16.png" />
+    <Content Include="Data\Images\RasterImageAnalysisNDVI32.png" />
+    <Content Include="Data\Images\ServiceProcessing16.png" />
+    <Content Include="Data\Images\ServiceProcessing32.png" />
+    <Content Include="Data\Images\SHP2TXT16.png" />
+    <Content Include="Data\Images\SHP2TXT32.png" />
+    <Content Include="Data\Images\TabletPC16.png" />
+    <Content Include="Data\Images\TabletPC32.png" />
+    <Content Include="Data\Images\TextDynamic16.png" />
+    <Content Include="Data\Images\TextDynamic32.png" />
+    <Content Include="Data\Images\TitleIcon.png" />
+    <Content Include="Data\Images\ToGDB16.png" />
+    <Content Include="Data\Images\ToGDB32.png" />
+    <Content Include="Data\Images\ico_Excel.png" />
+    <Content Include="Data\Images\Play.png" />
+    <Content Include="Data\Images\Play16.png" />
+    <Content Include="Data\Images\Play32.png" />
+    <Content Include="Data\Images\Search16.png" />
+    <Content Include="Data\Images\Search32.png" />
+    <Content Include="Data\Images\StatisticsMU16.png" />
+    <Content Include="Data\Images\StatisticsMU32.png" />
+    <Content Include="Data\Images\StatisticsSD16.png" />
+    <Content Include="Data\Images\StatisticsSD32.png" />
+    <Content Include="Data\Images\Topo16.png" />
+    <Content Include="Data\Images\Topo32.png" />
+    <Content Include="Data\Images\TXT2SHP16.png" />
+    <Content Include="Data\Images\TXT2SHP32.png" />
+    <Content Include="Data\Images\UnVissbleLayer16.png" />
+    <Content Include="Data\Images\UnVissbleLayer32.png" />
+    <Content Include="Data\Images\UpdataAlias16.png" />
+    <Content Include="Data\Images\UpdataAlias32.png" />
+    <Content Include="Data\Images\ViewThumbnails16.png" />
+    <Content Include="Data\Images\ViewThumbnails32.png" />
+    <Content Include="Data\Images\VissbleLayer16.png" />
+    <Content Include="Data\Images\VissbleLayer32.png" />
+    <Content Include="Data\Images\YDYH16.png" />
+    <Content Include="Data\Images\YDYH32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Data\Excel\【新模板】用地用海_中类.xlsx" />
+    <None Remove="Data\Excel\【新模板】用地用海_小类.xlsx" />
+    <None Remove="Data\Excel\【模板】三调土地利用现状分类面积汇总表.xlsx" />
+    <None Remove="Data\Excel\【模板】三调现状分类汇总表.xlsx" />
+    <None Remove="Data\Excel\【模板】国土空间管控表.xlsx" />
+    <None Remove="Data\Excel\【模板】现状指标表.xlsx" />
+    <None Remove="Data\Excel\【模板】现状调整表.xlsx" />
+    <None Remove="Data\Excel\【模板】用地用海_中类.xlsx" />
+    <None Remove="Data\Excel\【模板】用地用海_大类.xlsx" />
+    <None Remove="Data\Excel\【模板】用地用海_小类.xlsx" />
+    <None Remove="Data\Excel\【模板】界址点表.xlsx" />
+    <None Remove="Data\Excel\【模板】界址点表_多页.xlsx" />
+    <None Remove="Data\Excel\【模板】界址点表_多页_自定义.xlsx" />
+    <None Remove="Data\Excel\【模板】界址点表_多页_自定义2.xlsx" />
+    <None Remove="Data\Excel\【模板】空间功能结构调整表.xlsx" />
+    <None Remove="Data\Excel\【模板】规划指标一览表.xlsx" />
+    <None Remove="Data\Excel\三调三大地类统计表.xlsx" />
+    <None Remove="Data\Excel\三调用地名称_to_用地用海用地名称.xlsx" />
+    <None Remove="Data\Excel\三调用地名称_to_用地用海用地名称_新版.xlsx" />
+    <None Remove="Data\Excel\三调用地自转换.xlsx" />
+    <None Remove="Data\Excel\三调用地转大类.xlsx" />
+    <None Remove="Data\Excel\三调规程\三调用地编码自转换.xlsx" />
+    <None Remove="Data\Excel\三调规程\土地利用现状一级分类面积汇总表.xlsx" />
+    <None Remove="Data\Excel\三调规程\土地利用现状三大类面积汇总表.xlsx" />
+    <None Remove="Data\Excel\三调规程\土地利用现状分类面积汇总表%28竖版%29.xlsx" />
+    <None Remove="Data\Excel\三调规程\土地利用现状分类面积汇总表.xlsx" />
+    <None Remove="Data\Excel\公服表.xlsx" />
+    <None Remove="Data\Excel\新版用地用海_DM_to_MC.xlsx" />
+    <None Remove="Data\Excel\旧用地用海编码_to_新用地用海编码.xlsx" />
+    <None Remove="Data\Excel\用地用海_DM_to_MC.xlsx" />
+    <None Remove="Data\Excel\用地用海_归纳建设非建设用地.xlsx" />
+    <None Remove="Data\Excel\用地用海_归纳建设非建设用地2.xlsx" />
+    <None Remove="Data\Excel\用地用海代码_村庄功能.xlsx" />
+    <None Remove="Data\Excel\用地用海代码_管控分区.xlsx" />
+    <None Remove="Data\Excel\用地用海合并字段_新.xlsx" />
+    <None Remove="Data\Excel\用地用海合并字段_旧.xlsx" />
+    <None Remove="Data\Excel\用地用海汇总表.xlsx" />
+    <None Remove="Data\Excel\管控边界表.xlsx" />
+    <None Remove="Data\Excel\要素名称和别名对照表.xlsx" />
+    <None Remove="Data\Images\AddFields16.png" />
+    <None Remove="Data\Images\AddFields32.png" />
+    <None Remove="Data\Images\Adjustment16.png" />
+    <None Remove="Data\Images\Adjustment32.png" />
+    <None Remove="Data\Images\AttributeMapper16.png" />
+    <None Remove="Data\Images\AttributeMapper32.png" />
+    <None Remove="Data\Images\BoundaryPoint16.png" />
+    <None Remove="Data\Images\BoundaryPoint32.png" />
+    <None Remove="Data\Images\bug16.png" />
+    <None Remove="Data\Images\bug32.png" />
+    <None Remove="Data\Images\Cave16.png" />
+    <None Remove="Data\Images\Cave32.png" />
+    <None Remove="Data\Images\CCTool16.png" />
+    <None Remove="Data\Images\CCTool32.png" />
+    <None Remove="Data\Images\Check16.png" />
+    <None Remove="Data\Images\Check32.png" />
+    <None Remove="Data\Images\CheckGeometry16.png" />
+    <None Remove="Data\Images\CheckGeometry32.png" />
+    <None Remove="Data\Images\ClearZM16.png" />
+    <None Remove="Data\Images\ClearZM32.png" />
+    <None Remove="Data\Images\clipgdb16.png" />
+    <None Remove="Data\Images\clipgdb32.png" />
+    <None Remove="Data\Images\Domain16.png" />
+    <None Remove="Data\Images\Domain32.png" />
+    <None Remove="Data\Images\EditingEditShape16.png" />
+    <None Remove="Data\Images\EditingEditShape32.png" />
+    <None Remove="Data\Images\EffectsDim16.png" />
+    <None Remove="Data\Images\EffectsDim32.png" />
+    <None Remove="Data\Images\ElementEditVertices16.png" />
+    <None Remove="Data\Images\ElementEditVertices32.png" />
+    <None Remove="Data\Images\ElementLine16.png" />
+    <None Remove="Data\Images\ElementLine32.png" />
+    <None Remove="Data\Images\ElementSplinedText16.png" />
+    <None Remove="Data\Images\ElementSplinedText32.png" />
+    <None Remove="Data\Images\Excel16.png" />
+    <None Remove="Data\Images\Excel32.png" />
+    <None Remove="Data\Images\Extent16.png" />
+    <None Remove="Data\Images\Extent32.png" />
+    <None Remove="Data\Images\FieldCalculation16.png" />
+    <None Remove="Data\Images\FieldCalculation32.png" />
+    <None Remove="Data\Images\FolderOpen16.png" />
+    <None Remove="Data\Images\FolderOpen32.png" />
+    <None Remove="Data\Images\FolderWithGISDataNew16.png" />
+    <None Remove="Data\Images\FolderWithGISDataNew32.png" />
+    <None Remove="Data\Images\Function16.png" />
+    <None Remove="Data\Images\Function32.png" />
+    <None Remove="Data\Images\GenericEraser16.png" />
+    <None Remove="Data\Images\GenericEraser32.png" />
+    <None Remove="Data\Images\GenericFlash16.png" />
+    <None Remove="Data\Images\GenericFlash32.png" />
+    <None Remove="Data\Images\GenericFlowChart16.png" />
+    <None Remove="Data\Images\GenericFlowChart32.png" />
+    <None Remove="Data\Images\GenericMessage16.png" />
+    <None Remove="Data\Images\GenericMessage32.png" />
+    <None Remove="Data\Images\GenericTag16.png" />
+    <None Remove="Data\Images\GenericTag32.png" />
+    <None Remove="Data\Images\GenericWorkflowColor16.png" />
+    <None Remove="Data\Images\GenericWorkflowColor32.png" />
+    <None Remove="Data\Images\GenericWrench_B16.png" />
+    <None Remove="Data\Images\GenericWrench_B32.png" />
+    <None Remove="Data\Images\GeodatabaseAddNew16.png" />
+    <None Remove="Data\Images\GeodatabaseAddNew32.png" />
+    <None Remove="Data\Images\GeometricNetworkDisconnect16.png" />
+    <None Remove="Data\Images\GeometricNetworkDisconnect32.png" />
+    <None Remove="Data\Images\GeostatisticalSurface16.png" />
+    <None Remove="Data\Images\GeostatisticalSurface32.png" />
+    <None Remove="Data\Images\GetInfomation.png" />
+    <None Remove="Data\Images\go16.png" />
+    <None Remove="Data\Images\go32.png" />
+    <None Remove="Data\Images\GraphManage16.png" />
+    <None Remove="Data\Images\GraphManage32.png" />
+    <None Remove="Data\Images\GroupLayer16.png" />
+    <None Remove="Data\Images\GroupLayer32.png" />
+    <None Remove="Data\Images\HostedServicesFolder16.png" />
+    <None Remove="Data\Images\HostedServicesFolder32.png" />
+    <None Remove="Data\Images\ico_Excel.png" />
+    <None Remove="Data\Images\ItemInformation16.png" />
+    <None Remove="Data\Images\ItemInformation32.png" />
+    <None Remove="Data\Images\LasDatasetPoints16.png" />
+    <None Remove="Data\Images\LasDatasetPoints32.png" />
+    <None Remove="Data\Images\LayerProperties16.png" />
+    <None Remove="Data\Images\LayerProperties32.png" />
+    <None Remove="Data\Images\Map16.png" />
+    <None Remove="Data\Images\Map32.png" />
+    <None Remove="Data\Images\Maps16.png" />
+    <None Remove="Data\Images\Maps32.png" />
+    <None Remove="Data\Images\MapTiled16.png" />
+    <None Remove="Data\Images\MapTiled32.png" />
+    <None Remove="Data\Images\mdb2gdb16.png" />
+    <None Remove="Data\Images\mdb2gdb32.png" />
+    <None Remove="Data\Images\MergeSHP16.png" />
+    <None Remove="Data\Images\MergeSHP32.png" />
+    <None Remove="Data\Images\Open.png" />
+    <None Remove="Data\Images\Play.png" />
+    <None Remove="Data\Images\Play16.png" />
+    <None Remove="Data\Images\Play32.png" />
+    <None Remove="Data\Images\Playico.png" />
+    <None Remove="Data\Images\QRCode16.png" />
+    <None Remove="Data\Images\QRCode32.png" />
+    <None Remove="Data\Images\RasterImageAnalysisNDVI16.png" />
+    <None Remove="Data\Images\RasterImageAnalysisNDVI32.png" />
+    <None Remove="Data\Images\Search16.png" />
+    <None Remove="Data\Images\Search32.png" />
+    <None Remove="Data\Images\ServiceProcessing16.png" />
+    <None Remove="Data\Images\ServiceProcessing32.png" />
+    <None Remove="Data\Images\SHP2TXT16.png" />
+    <None Remove="Data\Images\SHP2TXT32.png" />
+    <None Remove="Data\Images\StatisticsMU16.png" />
+    <None Remove="Data\Images\StatisticsMU32.png" />
+    <None Remove="Data\Images\StatisticsSD16.png" />
+    <None Remove="Data\Images\StatisticsSD32.png" />
+    <None Remove="Data\Images\TabletPC16.png" />
+    <None Remove="Data\Images\TabletPC32.png" />
+    <None Remove="Data\Images\TextDynamic16.png" />
+    <None Remove="Data\Images\TextDynamic32.png" />
+    <None Remove="Data\Images\TitleIcon.png" />
+    <None Remove="Data\Images\ToGDB16.png" />
+    <None Remove="Data\Images\ToGDB32.png" />
+    <None Remove="Data\Images\Topo16.png" />
+    <None Remove="Data\Images\Topo32.png" />
+    <None Remove="Data\Images\TXT2SHP16.png" />
+    <None Remove="Data\Images\TXT2SHP32.png" />
+    <None Remove="Data\Images\UnVissbleLayer16.png" />
+    <None Remove="Data\Images\UnVissbleLayer32.png" />
+    <None Remove="Data\Images\UpdataAlias16.png" />
+    <None Remove="Data\Images\UpdataAlias32.png" />
+    <None Remove="Data\Images\ViewThumbnails16.png" />
+    <None Remove="Data\Images\ViewThumbnails32.png" />
+    <None Remove="Data\Images\VissbleLayer16.png" />
+    <None Remove="Data\Images\VissbleLayer32.png" />
+    <None Remove="Data\Images\YDYH16.png" />
+    <None Remove="Data\Images\YDYH32.png" />
+    <None Remove="Data\Layers\三调用地.lyrx" />
+    <None Remove="Data\Layers\三调用地_混合.lyrx" />
+    <None Remove="Data\Layers\国空用地.lyrx" />
+    <None Remove="Data\Layers\国空用地新版.lyrx" />
+    <None Remove="Data\Layers\村规用地.lyrx" />
+    <None Remove="Data\Layers\检查结果.lyrx" />
+    <None Remove="Data\Layers\规划用地.lyrx" />
+    <None Remove="Data\Stylx\三调-符号填充.stylx" />
+    <None Remove="Data\Village\制图包.rar" />
+    <None Remove="Data\Village\村规空库.rar" />
+    <None Remove="Data\用地用海_DM_to_MC.xlsx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Data\Excel\【新模板】用地用海_中类.xlsx" />
+    <EmbeddedResource Include="Data\Excel\【新模板】用地用海_小类.xlsx" />
+    <EmbeddedResource Include="Data\Excel\【模板】三调现状分类汇总表.xlsx" />
+    <EmbeddedResource Include="Data\Excel\【模板】国土空间管控表.xlsx" />
+    <EmbeddedResource Include="Data\Excel\【模板】现状指标表.xlsx" />
+    <EmbeddedResource Include="Data\Excel\【模板】用地用海_中类.xlsx" />
+    <EmbeddedResource Include="Data\Excel\【模板】用地用海_大类.xlsx" />
+    <EmbeddedResource Include="Data\Excel\【模板】用地用海_小类.xlsx" />
+    <EmbeddedResource Include="Data\Excel\【模板】界址点表.xlsx" />
+    <EmbeddedResource Include="Data\Excel\【模板】界址点表_多页.xlsx" />
+    <EmbeddedResource Include="Data\Excel\【模板】界址点表_多页_自定义.xlsx" />
+    <EmbeddedResource Include="Data\Excel\【模板】界址点表_多页_自定义2.xlsx" />
+    <EmbeddedResource Include="Data\Excel\【模板】空间功能结构调整表.xlsx" />
+    <EmbeddedResource Include="Data\Excel\【模板】规划指标一览表.xlsx" />
+    <EmbeddedResource Include="Data\Excel\三调三大地类统计表.xlsx" />
+    <EmbeddedResource Include="Data\Excel\三调用地名称_to_用地用海用地名称.xlsx" />
+    <EmbeddedResource Include="Data\Excel\三调用地名称_to_用地用海用地名称_新版.xlsx" />
+    <EmbeddedResource Include="Data\Excel\三调用地自转换.xlsx" />
+    <EmbeddedResource Include="Data\Excel\三调规程\土地利用现状一级分类面积汇总表.xlsx" />
+    <EmbeddedResource Include="Data\Excel\三调规程\土地利用现状三大类面积汇总表.xlsx" />
+    <EmbeddedResource Include="Data\Excel\三调规程\土地利用现状分类面积汇总表(竖版).xlsx" />
+    <EmbeddedResource Include="Data\Excel\三调规程\土地利用现状分类面积汇总表.xlsx" />
+    <EmbeddedResource Include="Data\Excel\公服表.xlsx" />
+    <EmbeddedResource Include="Data\Excel\新版用地用海_DM_to_MC.xlsx" />
+    <EmbeddedResource Include="Data\Excel\旧用地用海编码_to_新用地用海编码.xlsx" />
+    <EmbeddedResource Include="Data\Excel\用地用海_DM_to_MC.xlsx" />
+    <EmbeddedResource Include="Data\Excel\用地用海_归纳建设非建设用地.xlsx" />
+    <EmbeddedResource Include="Data\Excel\用地用海_归纳建设非建设用地2.xlsx" />
+    <EmbeddedResource Include="Data\Excel\用地用海代码_村庄功能.xlsx" />
+    <EmbeddedResource Include="Data\Excel\用地用海代码_管控分区.xlsx" />
+    <EmbeddedResource Include="Data\Excel\用地用海合并字段_新.xlsx" />
+    <EmbeddedResource Include="Data\Excel\用地用海合并字段_旧.xlsx" />
+    <EmbeddedResource Include="Data\Excel\用地用海汇总表.xlsx" />
+    <EmbeddedResource Include="Data\Excel\管控边界表.xlsx" />
+    <Content Include="Data\Images\Map16.png" />
+    <Content Include="Data\Images\Map32.png" />
+    <Content Include="Data\Images\Maps16.png" />
+    <Content Include="Data\Images\Maps32.png" />
+    <EmbeddedResource Include="Data\Excel\要素名称和别名对照表.xlsx" />
+    <EmbeddedResource Include="Data\Layers\三调用地_混合.lyrx" />
+    <EmbeddedResource Include="Data\Layers\国空用地.lyrx" />
+    <EmbeddedResource Include="Data\Layers\国空用地新版.lyrx" />
+    <EmbeddedResource Include="Data\Layers\村规用地.lyrx" />
+    <EmbeddedResource Include="Data\Layers\检查结果.lyrx" />
+    <EmbeddedResource Include="Data\Stylx\三调-符号填充.stylx" />
+    <EmbeddedResource Include="Data\Village\制图包.rar" />
+    <EmbeddedResource Include="Data\Village\村规空库.rar" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="ApeFree.DataStore" Version="1.0.6" />
+    <PackageReference Include="HtmlAgilityPack" Version="1.11.52" />
+    <PackageReference Include="NPOI" Version="2.6.2" />
+    <PackageReference Include="QRCoder" Version="1.4.3" />
+    <PackageReference Include="SharpCompress" Version="0.33.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="ArcGIS.Desktop.Framework">
+      <HintPath>D:\Program Files\ArcGIS\Pro\bin\ArcGIS.Desktop.Framework.dll</HintPath>
+      <CopyLocal>False</CopyLocal>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ArcGIS.Core">
+      <HintPath>D:\Program Files\ArcGIS\Pro\bin\ArcGIS.Core.dll</HintPath>
+      <CopyLocal>False</CopyLocal>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ArcGIS.Desktop.Core">
+      <HintPath>D:\Program Files\ArcGIS\Pro\bin\Extensions\Core\ArcGIS.Desktop.Core.dll</HintPath>
+      <CopyLocal>False</CopyLocal>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ArcGIS.Desktop.Mapping">
+      <HintPath>D:\Program Files\ArcGIS\Pro\bin\Extensions\Mapping\ArcGIS.Desktop.Mapping.dll</HintPath>
+      <CopyLocal>False</CopyLocal>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ArcGIS.Desktop.Catalog">
+      <HintPath>D:\Program Files\ArcGIS\Pro\bin\Extensions\Catalog\ArcGIS.Desktop.Catalog.dll</HintPath>
+      <CopyLocal>False</CopyLocal>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ArcGIS.Desktop.Editing">
+      <HintPath>D:\Program Files\ArcGIS\Pro\bin\Extensions\Editing\ArcGIS.Desktop.Editing.dll</HintPath>
+      <CopyLocal>False</CopyLocal>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ArcGIS.Desktop.Extensions">
+      <HintPath>D:\Program Files\ArcGIS\Pro\bin\Extensions\DesktopExtensions\ArcGIS.Desktop.Extensions.dll</HintPath>
+      <CopyLocal>False</CopyLocal>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ArcGIS.Desktop.GeoProcessing">
+      <HintPath>D:\Program Files\ArcGIS\Pro\bin\Extensions\GeoProcessing\ArcGIS.Desktop.GeoProcessing.dll</HintPath>
+      <CopyLocal>False</CopyLocal>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ArcGIS.Desktop.Layouts">
+      <HintPath>D:\Program Files\ArcGIS\Pro\bin\Extensions\Layout\ArcGIS.Desktop.Layouts.dll</HintPath>
+      <CopyLocal>False</CopyLocal>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ArcGIS.Desktop.Shared.Wpf">
+      <HintPath>D:\Program Files\ArcGIS\Pro\bin\ArcGIS.Desktop.Shared.Wpf.dll</HintPath>
+      <CopyLocal>False</CopyLocal>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ArcGIS.Desktop.Ribbon.Wpf">
+      <HintPath>D:\Program Files\ArcGIS\Pro\bin\ArcGIS.Desktop.Ribbon.Wpf.dll</HintPath>
+      <CopyLocal>False</CopyLocal>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ArcGIS.Desktop.DataGrid.Contrib.Wpf">
+      <HintPath>D:\Program Files\ArcGIS\Pro\bin\ArcGIS.Desktop.DataGrid.Contrib.Wpf.dll</HintPath>
+      <CopyLocal>False</CopyLocal>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ArcGIS.Desktop.Resources">
+      <HintPath>D:\Program Files\ArcGIS\Pro\bin\ArcGIS.Desktop.Resources.dll</HintPath>
+      <CopyLocal>False</CopyLocal>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Aspose.Cells">
+      <HintPath>bin\Debug\net6.0-windows\Aspose.Cells.dll</HintPath>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.ItemIndex">
+      <HintPath>D:\Program Files\ArcGIS\Pro\bin\ESRI.ArcGIS.ItemIndex.dll</HintPath>
+      <CopyLocal>False</CopyLocal>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="office">
+      <HintPath>C:\Windows\assembly\GAC_MSIL\office\15.0.0.0__71e9bce111e9429c\OFFICE.DLL</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Data\Images\Open.png" />
+    <Content Include="Data\Images\Playico.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="Data\xdb\ip2region.xdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <Import Project="D:\Program Files\ArcGIS\Pro\bin\Esri.ProApp.SDK.Desktop.targets" Condition="Exists('D:\Program Files\ArcGIS\Pro\bin\Esri.ProApp.SDK.Desktop.targets') AND !Exists('Esri.ArcGISPro.Extensions.targets')" />
+</Project>

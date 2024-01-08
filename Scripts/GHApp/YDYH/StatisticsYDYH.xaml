@@ -1,0 +1,41 @@
+﻿<controls:ProWindow x:Class="CCTool.Scripts.StatisticsYDYH"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:controls="clr-namespace:ArcGIS.Desktop.Framework.Controls;assembly=ArcGIS.Desktop.Framework"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:extensions="clr-namespace:ArcGIS.Desktop.Extensions;assembly=ArcGIS.Desktop.Extensions"
+        mc:Ignorable="d"
+        Title="用地用海指标汇总" Height="398" Width="500" WindowStartupLocation="CenterScreen"
+
+    >
+    <controls:ProWindow.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </controls:ProWindow.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Label Content="输入要素图层：" HorizontalAlignment="Left" Margin="15,10,0,0" VerticalAlignment="Top" Width="375" Grid.ColumnSpan="2" Height="25"/>
+        <ComboBox x:Name="combox_fc" Margin="15,35,15,0" VerticalAlignment="Top" DropDownOpened="combox_fc_DropDown" Grid.ColumnSpan="2" Height="21"/>
+        <Label Content="输出Excel文件路径：" HorizontalAlignment="Left" Margin="15,105,0,0" VerticalAlignment="Top" Width="375" Grid.ColumnSpan="2" Height="25"/>
+        <Label Content="汇总模式：" HorizontalAlignment="Left" Margin="15,155,0,0" VerticalAlignment="Top" Width="216" Height="25"/>
+        <ComboBox x:Name="combox_model" Margin="15,0,111,0" VerticalAlignment="Center" Height="21"/>
+        <Button x:Name="btn_go" Content="执行 " Margin="0,0,15,15" Width="59" Height="19" VerticalAlignment="Bottom" Click="btn_go_Click" HorizontalContentAlignment="Center" HorizontalAlignment="Right" Background="{x:Null}" Grid.Column="1"/>
+        <TextBox x:Name="textExcelPath" Margin="15,135,53,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="21" Grid.ColumnSpan="2"/>
+        <Button x:Name="openExcelButton" Content="打开" Margin="0,135,15,0" HorizontalAlignment="Right" Width="33" Height="21" VerticalAlignment="Top" Click="openExcelButton_Click" Background="{x:Null}" Grid.Column="1"/>
+        <Label Content="输入用地编码字段：" Margin="15,59,19,0" VerticalAlignment="Top" Height="25" Grid.ColumnSpan="2"/>
+        <ComboBox x:Name="combox_bmField" Margin="15,84,19,0" VerticalAlignment="Top" DropDownOpened="combox_field_DropDown" Height="21"/>
+        <Label Content="面积字段：" Margin="22,59,22,0" VerticalAlignment="Top" Height="25" Grid.Column="1"/>
+        <ComboBox x:Name="combox_areaField" Margin="22,84,15,0" VerticalAlignment="Top" DropDownOpened="combox_areaField_DropDown" Height="21" Grid.Column="1"/>
+        <Label Content="用地用海版本：" HorizontalAlignment="Left" Margin="15,202,0,0" VerticalAlignment="Top" Width="368" Grid.ColumnSpan="2"/>
+        <ComboBox x:Name="combox_version" Margin="15,227,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="124"/>
+
+    </Grid>
+</controls:ProWindow>

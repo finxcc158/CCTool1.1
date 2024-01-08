@@ -1,0 +1,26 @@
+﻿<controls:ProWindow x:Name="form" x:Class="CCTool.Scripts.MiniTool.GetInfo.InfoLayer"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:controls="clr-namespace:ArcGIS.Desktop.Framework.Controls;assembly=ArcGIS.Desktop.Framework"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:extensions="clr-namespace:ArcGIS.Desktop.Extensions;assembly=ArcGIS.Desktop.Extensions"
+        mc:Ignorable="d"
+        Title="获取当前地图内的图层" Height="400" Width="600" WindowStartupLocation="CenterScreen" Loaded="form_loaded"
+    >
+    <controls:ProWindow.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </controls:ProWindow.Resources>
+    <Grid>
+        <RichTextBox x:Name="tb_message" Margin="22,51,23,29" VerticalScrollBarVisibility="Visible">
+            <FlowDocument>
+
+            </FlowDocument>
+        </RichTextBox>
+        <Label x:Name="lb" Content="当前地图：【Map】" HorizontalAlignment="Left" Margin="22,21,0,0" VerticalAlignment="Top" Width="302"/>
+    </Grid>
+</controls:ProWindow>

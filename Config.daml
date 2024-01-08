@@ -1,0 +1,706 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ArcGIS defaultAssembly="CCTool.dll" defaultNamespace="CCTool" xmlns="http://schemas.esri.com/DADF/Registry" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.esri.com/DADF/Registry file:///D:/Program%20Files/ArcGIS/Pro/bin/ArcGIS.Desktop.Framework.xsd">
+  <AddInInfo id="{13d51b3c-4844-41de-974d-a588db768fff}" version="1.1.6" desktopVersion="3.0.36056">
+    <Name>CCTool</Name>
+    <Description>CC</Description>
+    <Image>Images\CCTool32.png</Image>
+    <Author>GHGIS</Author>
+    <Company>China</Company>
+    <Date>2024/1/3</Date>
+    <Subject>Framework</Subject>
+  </AddInInfo>
+  <modules>
+    <insertModule id="CCTool_Module" className="Module1" autoLoad="false" caption="Module1">
+      <tabs>
+        <tab id="CC_Tool" caption="CC工具箱1.1.6" keytip="CC">
+          <!--组：数据处理-->
+          <group refID="Data_Edit" />
+          <!--组：字段处理-->
+          <group refID="Attribute_Edit" />
+          <!--组：综合应用-->
+          <group refID="Mix_Application" />
+          <!--组：规划应用-->
+          <group refID="GH_Application" />
+          <!--组：村庄规划【福建】-->
+          <group refID="GH_Village" />
+          <!--组：地图工具-->
+          <group refID="Map_Tools" />
+          <!--组：小小工具-->
+          <group refID="Mini_Tool" />
+          <!--组：系统带的选择工具组-->
+          <group refID="esri_mapping_linearReferencing_selectionGroup" />
+          <!--组：测试组-->
+          <group refID="Test_Group" />
+        </tab>
+      </tabs>
+      <groups>
+        <!--组：数据处理-->
+        <group id="Data_Edit" caption="数据处理" appearsOnAddInTab="false" keytip="DE">
+          <!--TXT相关-->
+          <buttonPalette refID="CCTool_Scripts_ButtonPalette_TXT" />
+          <!--CAD相关-->
+          <buttonPalette refID="CCTool_Scripts_ButtonPalette_CAD" />
+          <!--SHP相关-->
+          <buttonPalette refID="CCTool_Scripts_ButtonPalette_SHP" />
+          <!--Excel相关-->
+          <buttonPalette refID="CCTool_Scripts_ButtonPalette_Excel" />
+          <!--GDB相关-->
+          <buttonPalette refID="CCTool_Scripts_ButtonPalette_GDB" />
+          <!--要素综合-->
+          <buttonPalette refID="CCTool_Scripts_ButtonPalette_FeatureMix" />
+        </group>
+        <group id="Mini_Tool" caption="小小工具" appearsOnAddInTab="false" keytip="MT">
+          <!--小工具-->
+          <buttonPalette refID="CCTool_Scripts_ButtonPalette_MiniTool" />
+          <!--BUG修复工具-->
+          <buttonPalette refID="CCTool_Scripts_ButtonPalette_BUGRepair" />
+          <!--信息获取工具-->
+          <buttonPalette refID="CCTool_Scripts_ButtonPalette_GetInfo" />
+        </group>
+        <!--组：字段处理-->
+        <group id="Attribute_Edit" caption="字段处理" appearsOnAddInTab="false" keytip="AE">
+          <!--字符串相关-->
+          <buttonPalette refID="CCTool_Scripts_ButtonPalette_TEXT" />
+          <!--数字相关-->
+          <buttonPalette refID="CCTool_Scripts_ButtonPalette_MATH" />
+          <!--字段综合-->
+          <buttonPalette refID="CCTool_Scripts_ButtonPalette_FieldMix" />
+        </group>
+        <!--组：地图工具-->
+        <group id="Map_Tools" caption="地图工具" appearsOnAddInTab="false" keytip="MT">
+          <!--地图工具-->
+          <toolPalette refID="CCTool_Scripts_ButtonPalette_MapTool" />
+        </group>
+        <!--组：测试-->
+        <group id="Test_Group" caption="测试" appearsOnAddInTab="false" keytip="TE">
+          <!--测试按钮-->
+          <button refID="CCTool_Scripts_UI_ProButton_TestButton" />
+          <button refID="CCTool_Scripts_UI_ProButton_TestButton2" />
+        </group>
+        <!--组：综合应用-->
+        <group id="Mix_Application" caption="综合应用" appearsOnAddInTab="false" keytip="MA">
+          <!--制图相关-->
+          <buttonPalette refID="CCTool_Scripts_ButtonPalette_MAP" />
+        </group>
+        <!--组：规划应用-->
+        <group id="GH_Application" caption="规划应用" appearsOnAddInTab="false" keytip="GA">
+          <!--面板：用地用海处理-->
+          <buttonPalette refID="CCTool_Scripts_ButtonPalette_YDYH" />
+          <!--面板：三调图斑处理-->
+          <buttonPalette refID="CCTool_Scripts_ButtonPalette_SD" />
+        </group>
+        <!--组：村庄规划【福建】-->
+        <group id="GH_Village" caption="村庄规划【福建】" appearsOnAddInTab="false" keytip="GV">
+          <!--面板：准备工作-->
+          <buttonPalette refID="CCTool_Scripts_ButtonPalette_Village_Prepar" />
+          <!--面板：入库-->
+          <buttonPalette refID="CCTool_Scripts_ButtonPalette_Village_ToGDB" />
+          <!--面板：制表-->
+          <buttonPalette refID="CCTool_Scripts_ButtonPalette_Village_CreateTable" />
+          <!--面板：制图-->
+          <buttonPalette refID="CCTool_Scripts_ButtonPalette_Village_CreatePicture" />
+          <!--面板：生成报告-->
+          <buttonPalette refID="CCTool_Scripts_ButtonPalette_Village_CreateReport" />
+        </group>
+      </groups>
+      <palettes>
+        <!--面板：用地用海处理相关-->
+        <buttonPalette id="CCTool_Scripts_ButtonPalette_YDYH" caption="用地用海" dropDown="false" menuStyle="true" keytip="YD">
+          <!--按钮：赋值用地用海编码和名称-->
+          <button refID="CCTool_Scripts_GHApp_YDYH_UpdataYDYH" />
+          <!--按钮：用地用海转换-->
+          <button refID="CCTool_Scripts_YDYHChanger" />
+          <!--按钮：用地用海指标汇总-->
+          <button refID="CCTool_Scripts_StatisticsYDYH" />
+          <!--按钮：生成分级用地用海编码名称-->
+          <button refID="CCTool_Scripts_CreateGradYDYH" />
+          <!--按钮：检查用地用海字段-->
+          <button refID="CCTool_Scripts_CheckYDYH" />
+          <!--按钮：检查现状规划用地变化-->
+          <button refID="CCTool_Scripts_CheckYDChange" />
+          <!--按钮：检查现状规划用地变化(按规范字段)-->
+          <button refID="CCTool_Scripts_UI_ProWindow_CheckYDChangePlus" />
+          <!--按钮：用地用海旧转新-->
+          <button refID="CCTool_Scripts_GHApp_YDYH_YDYHOld2New" />
+        </buttonPalette>
+        <!--面板：地图工具-->
+        <toolPalette id="CCTool_Scripts_ButtonPalette_MapTool" caption="地图工具">
+          <!--获取点坐标-->
+          <tool refID="CCTool_Scripts_UI_ProMapTool_GetMapCoordinates" />
+          <!--隐藏图层-->
+          <tool refID="CCTool_Scripts_UI_ProMapTool_HideLayer" />
+          <!--隔离图层-->
+          <tool refID="CCTool_Scripts_UI_ProMapTool_KeepLayer" />
+          <!--要素计数器-->
+          <tool refID="CCTool_Scripts_UI_ProMapTool_FeatureCounter" />
+          <tool refID="CCTool_Scripts_UI_ProMapTool_TestMapTool" />
+        </toolPalette>
+        <!--面板：三调处理相关-->
+        <buttonPalette id="CCTool_Scripts_ButtonPalette_SD" caption="三调" dropDown="true" menuStyle="true" keytip="SD">
+          <!--按钮：三调转用地用海-->
+          <button refID="CCTool_Scripts_UI_ProWindow_SD2YDYH" />
+          <!--按钮：1、土地利用现状分类面积汇总表-->
+          <button refID="CCTool_Scripts_UI_SD_SDStatisticYD" />
+          <!--按钮：1、土地利用现状分类面积汇总表(竖版)-->
+          <button refID="CCTool_Scripts_GHApp_SD_SDStatisticYDHori" />
+          <!--按钮：2、土地利用现状一级分类面积汇总表-->
+          <button refID="CCTool_Scripts_UI_SD_SDStatistic1" />
+          <!--按钮：3、土地利用现状三大类面积汇总表-->
+          <button refID="CCTool_Scripts_UI_SD_SDStatistic3" />
+        </buttonPalette>
+        <!--面板：准备工作-->
+        <buttonPalette id="CCTool_Scripts_ButtonPalette_Village_Prepar" caption="准备工作" dropDown="false" menuStyle="true" keytip="VG">
+          <!--按钮：村规_数据完整性检查-->
+          <button refID="CCTool_Scripts_UI_ProButton_VgCheckData" />
+          <!--按钮：村规_要素几何检查-->
+          <button refID="CCTool_Scripts_UI_ProButton_VgCheckGeometry" />
+          <!--按钮：村规设置-->
+          <button refID="CCTool_Scripts_UI_ProWindow_VgSetting" />
+        </buttonPalette>
+        <!--面板：入库-->
+        <buttonPalette id="CCTool_Scripts_ButtonPalette_Village_ToGDB" caption="入库" dropDown="false" menuStyle="true" keytip="VG">
+          <!--按钮：村规_入库汇总-->
+          <button refID="CCTool_Scripts_UI_ProButton_VgCreateAll" />
+          <!--按钮：1、创建村级调查区-->
+          <button refID="CCTool_Scripts_UI_ProButton_VgCreatCJDCQ" />
+          <!--按钮：2、创建村级调查区界线-->
+          <button refID="CCTool_Scripts_UI_ProButton_VgCreateCJDCQJX" />
+          <!--按钮：3、创建基期地类图斑-->
+          <button refID="CCTool_Scripts_UI_ProButton_VgCreateJQDLTB" />
+          <!--按钮：4、创建现状公服设施点-->
+          <button refID="CCTool_Scripts_UI_ProButton_VgCreateGGJCSSD" />
+          <!--按钮：5、创建规划地类图斑-->
+          <button refID="CCTool_Scripts_UI_ProButton_VgCreateGHDLTB" />
+          <!--按钮：6、创建规划公服设施点-->
+          <button refID="CCTool_Scripts_UI_ProButton_VgCreateGHGGJCSSD" />
+          <!--按钮：7、创建管控边界-->
+          <button refID="CCTool_Scripts_UI_ProButton_VgCreateGKBJ" />
+          <!--按钮：8、创建历史文化保护区-->
+          <button refID="CCTool_Scripts_UI_ProButton_VgCreateLSWHBHQ" />
+          <!--按钮：9、创建空间功能结构调整表-->
+          <button refID="CCTool_Scripts_UI_ProButton_VgCreateKJGNJGTZB" />
+          <!--按钮：10、创建规划指标表-->
+          <button refID="CCTool_Scripts_UI_ProButton_VgCreateGHZBB" />
+        </buttonPalette>
+        <!--面板：制表-->
+        <buttonPalette id="CCTool_Scripts_ButtonPalette_Village_CreateTable" caption="制表" dropDown="false" menuStyle="true" keytip="VG">
+          <!--按钮：村规_制表汇总-->
+          <button refID="CCTool_Scripts_UI_ProButton_VgTableAll" />
+          <!--按钮：1、生成现状调整表-->
+          <button refID="CCTool_Scripts_UI_ProButton_VgExcelXZTZB" />
+          <!--按钮：2、生成空间功能结构调整表-->
+          <button refID="CCTool_Scripts_UI_ProButton_VgExcelKJGNJGTZB" />
+          <!--按钮：3、生成规划指标表-->
+          <button refID="CCTool_Scripts_UI_ProButton_VgExcelGHZBB" />
+          <!--按钮：4、生成管控分区表-->
+          <button refID="CCTool_Scripts_UI_ProButton_VGExcelGKFQ" />
+        </buttonPalette>
+        <!--面板：生成制图-->
+        <buttonPalette id="CCTool_Scripts_ButtonPalette_Village_CreatePicture" caption="制图" dropDown="false" menuStyle="true" keytip="VG">
+          <!--按钮：村规_制图汇总-->
+          <!--<button refID="CCTool_Scripts_UI_ProButton_VgPictureAll" />-->
+          <!--按钮：1、生成村域综合现状图-->
+          <button refID="CCTool_Scripts_UI_ProButton_VgPictureXZT" />
+          <!--按钮：2、生成村域综合规划图-->
+          <button refID="CCTool_Scripts_UI_ProButton_VgPictureGHT" />
+          <!--按钮：3、生成国土空间管制边界图-->
+          <button refID="CCTool_Scripts_UI_ProButton_VgPictureGKBJT" />
+        </buttonPalette>
+        <!--面板：村规报告-->
+        <buttonPalette id="CCTool_Scripts_ButtonPalette_Village_CreateReport" caption="PPT" dropDown="false" menuStyle="true" keytip="VG">
+          <!--按钮：村规_PPT制作-->
+          <!--<button refID="CCTool_Scripts_UI_ProButton_CreatePPT" />-->
+        </buttonPalette>
+        <!--面板：TXT相关-->
+        <buttonPalette id="CCTool_Scripts_ButtonPalette_TXT" caption="TXT相关" dropDown="false" menuStyle="true" keytip="EXL">
+          <!--按钮：TXT文件转要素-->
+          <button refID="CCTool_Scripts_UI_ProWindow_TXT2GDB" />
+          <!--按钮：SHP要素转TXT-->
+          <button refID="CCTool_Scripts_DataPross_TXT_GDB2TXT" />
+          <!--按钮：进出平衡@SHP转TXT-->
+          <button refID="CCTool_Scripts_UI_ProWindow_PHShp2Txt" />
+          <!--按钮：进出平衡@TXT转SHP-->
+          <button refID="CCTool_Scripts_UI_ProWindow_PHTxt2Shp" />
+        </buttonPalette>
+        <!--面板：SHP相关-->
+        <buttonPalette id="CCTool_Scripts_ButtonPalette_SHP" caption="SHP相关" dropDown="false" menuStyle="true" keytip="SHP">
+          <!--按钮：合并shp文件-->
+          <button refID="CCTool_Scripts_UI_ProWindow_MergeSHP" />
+          <!--按钮：SHP转KML文件-->
+          <button refID="CCTool_Scripts_DataPross_SHP_SHP2KML" />
+        </buttonPalette>
+        <!--面板：CAD相关-->
+        <buttonPalette id="CCTool_Scripts_ButtonPalette_CAD" caption="CAD相关" dropDown="false" menuStyle="true" keytip="SHP">
+          <!--按钮：合并CAD文件-->
+          <button refID="CCTool_Scripts_UI_ProWindow_MergerCAD" />
+        </buttonPalette>
+        <!--面板：Excel相关-->
+        <buttonPalette id="CCTool_Scripts_ButtonPalette_Excel" caption="Excel相关" dropDown="false" menuStyle="true" keytip="SHP">
+          <!--按钮：属性结构描述表转空库-->
+          <button refID="CCTool_Scripts_UI_ProWindow_ExcelToEmptyGDB" />
+          <!--按钮：界址点导出Excel-->
+          <button refID="CCTool_Scripts_UI_ProWindow_ExportBoundaryPoints" />
+          <!--按钮：界址点导出Excel(私人定制版，不通用)-->
+          <button refID="CCTool_Scripts_DataPross_Excel_ExportBoundaryPointsByCustom" />
+          <!--按钮：设置界址点从西北角开始-->
+          <button refID="CCTool_Scripts_DataPross_Excel_SetBoundaryPointsFromNW" />
+          <!--按钮：面要素导出界址点要素-->
+          <button refID="CCTool_Scripts_DataPross_Excel_Polygon2BoundaryPoint" />
+          <!--按钮：Excel导出图片-->
+          <button refID="CCTool_Scripts_DataPross_Excel_Excel2JPG" />
+        </buttonPalette>
+        <!--面板：GDB相关-->
+        <buttonPalette id="CCTool_Scripts_ButtonPalette_GDB" caption="GDB相关" dropDown="false" menuStyle="true" keytip="GDB">
+          <!--按钮：要素类追加至空库(批量)-->
+          <button refID="CCTool_Scripts_UI_ProWindow_UpdateGDB" />
+          <!--按钮：按范围裁剪gdb数据库-->
+          <button refID="CCTool_Scripts_UI_ProWindow_ClipGDB" />
+          <!--按钮：合并gdb数据库-->
+          <button refID="CCTool_Scripts_DataPross_GDB_MergeGDB" />
+          <!--按钮：mdb转gdb-->
+          <button refID="CCTool_Scripts_DataPross_GDB_MDB2GDB" />
+        </buttonPalette>
+        <!--面板：数据综合-->
+        <buttonPalette id="CCTool_Scripts_ButtonPalette_FeatureMix" caption="要素综合" dropDown="false" menuStyle="true" keytip="FM">
+          <!--按钮：清除ZM值-->
+          <button refID="CCTool_Scripts_DataPross_FeatureClasses_ClearFeatureClassZM" />
+          <!--按钮：平差工具-->
+          <button refID="CCTool_Scripts_DataPross_FeatureClasses_AdjustmentsTool" />
+          <!--按钮：按最大面积标识-->
+          <!--<button refID="CCTool_Scripts_DataPross_FeatureClasses_IdentityAsMax" />-->
+          <!--按钮：属性读取-->
+          <button refID="CCTool_Scripts_DataPross_FeatureClasses_AttributeReader" />
+        </buttonPalette>
+        <!--面板：字符串相关-->
+        <buttonPalette id="CCTool_Scripts_ButtonPalette_TEXT" caption="字符串相关" dropDown="false" menuStyle="true" keytip="AT">
+          <!--按钮：属性映射-->
+          <button refID="CCTool_Scripts_UI_ProWindow_AttributeMapper" />
+          <button refID="CCTool_Scripts_UI_ProWindow_AttributeMapperPlus" />
+          <!--按钮：提取特定文字-->
+          <button refID="CCTool_Scripts_UI_ProWindow_GetWord" />
+          <!--按钮：字段数据清洗-->
+          <button refID="CCTool_Scripts_UI_ProWindow_FieldClear" />
+        </buttonPalette>
+        <!--面板：数字相关-->
+        <buttonPalette id="CCTool_Scripts_ButtonPalette_MATH" caption="数字相关" dropDown="false" menuStyle="true" keytip="AT">
+          <!--按钮：度分秒转十进制度-->
+          <button refID="CCTool_Scripts_UI_ProWindow_DegreeChange" />
+          <!--按钮：计算面积-->
+          <button refID="CCTool_Scripts_Attribute_FieldFloat_CalculateArea" />
+        </buttonPalette>
+        <!--面板：字段综合-->
+        <buttonPalette id="CCTool_Scripts_ButtonPalette_FieldMix" caption="字段综合" dropDown="false" menuStyle="true" keytip="AT">
+          <!--按钮：添加字段（综合）-->
+          <button refID="CCTool_Scripts_UI_ProWindow_AddFields" />
+          <!--按钮：更新字段别名(属性映射)-->
+          <button refID="CCTool_Scripts_UI_ProWindow_UpdateAliasName" />
+          <!--按钮：批量计算字段-->
+          <button refID="CCTool_Scripts_UI_ProWindow_CalculateFields" />
+          <!--按钮：复制字段-->
+          <button refID="CCTool_Scripts_UI_ProWindow_CopyFields" />
+          <!--按钮：添加图层名和路径到字段-->
+          <button refID="CCTool_Scripts_Attribute_FieldMix_AddLayerNameToField" />
+          <!--按钮：字段排序-->
+          <!--<button refID="CCTool_Scripts_UI_ProWindow_SortFeild" />-->
+        </buttonPalette>
+        <!--面板：小工具-->
+        <buttonPalette id="CCTool_Scripts_ButtonPalette_MiniTool" caption="小工具" dropDown="false" menuStyle="true" keytip="AT">
+          <!--按钮：把域名解析为IP-->
+          <button refID="CCTool_Scripts_MiniTool_Domain2IP" />
+          <!--按钮：二维码生成器-->
+          <button refID="CCTool_Scripts_MiniTool_MTool_CodeMaker" />
+          <!--按钮：汉字转为Unicode-->
+          <button refID="CCTool_Scripts_MiniTool_MTool_String2Unicode" />
+        </buttonPalette>
+        <!--面板：BUG修复-->
+        <buttonPalette id="CCTool_Scripts_ButtonPalette_BUGRepair" caption="BUG修复" dropDown="false" menuStyle="true" keytip="BR">
+          <!--按钮：SHP字段长度设置为10(5个汉字)-->
+          <button refID="CCTool_Scripts_MiniTool_BUGRepair_RepairSHPLength" />
+        </buttonPalette>
+        <!--面板：信息获取-->
+        <buttonPalette id="CCTool_Scripts_ButtonPalette_GetInfo" caption="信息获取" dropDown="false" menuStyle="true" keytip="AT">
+          <!--按钮：获取所有字段信息-->
+          <button refID="CCTool_Scripts_MiniTool_GetInfo_InfoFields" />
+          <!--按钮：获取字段的所有唯一值-->
+          <button refID="CCTool_Scripts_MiniTool_GetInfo_InfoFieldValue" />
+          <!--按钮：获取界址点信息-->
+          <button refID="CCTool_Scripts_MiniTool_GetInfo_InfoMapPoints" />
+          <!--按钮：获取当前地图内的图层-->
+          <button refID="CCTool_Scripts_MiniTool_GetInfo_InfoLayer" />
+        </buttonPalette>
+        <!--面板：综合制图-->
+        <buttonPalette id="CCTool_Scripts_ButtonPalette_MAP" caption="制图相关" dropDown="false" menuStyle="true" keytip="AT">
+          <!--按钮：导出布局（批量）-->
+          <button refID="CCTool_Scripts_UI_ProWindow_ExportLayout" />
+          <!--按钮：按图层导出布局-->
+          <button refID="CCTool_Scripts_UI_ProWindow_ExportLayoutByLayer" />
+        </buttonPalette>
+      </palettes>
+      <menus>
+        <!--选择要素菜单-->
+        <menu id="CCTool_Scripts_Selection_Menu" caption="CC工具箱" smallImage="Data/Images/CCTool16.png" largeImage="Data/Images/CCTool32.png">
+          <!--面积统计-->
+          <button refID="CCTool_Scripts_UI_ProWindow_AreaStatistics" />
+        </menu>
+        <!--要素类菜单-->
+        <menu id="CCTool_Scripts_UI_ProMenu_FeatureClass_Menu" caption="CC工具箱" smallImage="Data/Images/CCTool16.png" largeImage="Data/Images/CCTool32.png">
+          <!--面要素拓扑-->
+          <button refID="CCTool_Scripts_UI_ProButton_PolygonTopology" />
+          <!--线要素拓扑-->
+          <button refID="CCTool_Scripts_LayerPross_PolylineTopology" />
+          <!--面要素计算四至-->
+          <button refID="CCTool_Scripts_UI_ProButton_PolygonExtent" />
+          <!--要素空洞处理-->
+          <button refID="CCTool_Scripts_UI_ProWindow_GetCave" />
+          <!--线闭合-->
+          <button refID="CCTool_Scripts_UI_ProButton_CloseLine" />
+          <!--应用符号系统-->
+          <button refID="CCTool_Scripts_UI_ProWindow_ApplySymbologyYDYH" />
+          <!--多分式标注-->
+          <button refID="CCTool_Scripts_UI_ProWindow_MultipleAnnatation" />
+          <!--从上至下从左至右排序-->
+          <button refID="CCTool_Scripts_UI_ProButton_ShotID" />
+          <!--从下至上从右至左排序-->
+          <button refID="CCTool_Scripts_UI_ProButton_ShotIDRD" />
+        </menu>
+        <!--地图框菜单-->
+        <menu id="CCTool_Scripts_UI_ProMenu_Map_Menu" caption="CC工具箱" smallImage="Data/Images/CCTool16.png" largeImage="Data/Images/CCTool32.png">
+          <!--显示所有图层-->
+          <button refID="CCTool_Scripts_UI_ProButton_MapVisibleLayer" />
+          <!--关闭所有图层-->
+          <button refID="CCTool_Scripts_UI_ProButton_MapUnVisibleLayer" />
+        </menu>
+      </menus>
+      <controls>
+        <!-- 按钮Button-->
+        <button id="CCTool_Scripts_YDYHChanger" caption="用地用海转换" keytip="YC" className="CCTool.Scripts.ShowYDYHChanger" loadOnClick="true" smallImage="Data/Images/YDYH16.png" largeImage="Data/Images/YDYH32.png">
+          <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
+        </button>
+        <button id="CCTool_Scripts_StatisticsYDYH" caption="用地用海指标汇总" keytip="SY" className="CCTool.Scripts.ShowStatisticsYDYH" loadOnClick="true" smallImage="Data/Images/Function16.png" largeImage="Data/Images/Function32.png">
+          <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
+        </button>
+        <button id="CCTool_Scripts_CreateGradYDYH" caption="生成分级用地用海编码名称" keytip="CG" className="CCTool.Scripts.ShowCreateGradYDYH" loadOnClick="true" smallImage="Data/Images/ItemInformation16.png" largeImage="Data/Images/ItemInformation32.png">
+          <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
+        </button>
+        <button id="CCTool_Scripts_CheckYDYH" caption="检查用地用海字段" keytip="CYD" className="CCTool.Scripts.ShowCheckYDYH" loadOnClick="true" smallImage="Data/Images/Check16.png" largeImage="Data/Images/Check32.png">
+          <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
+        </button>
+        <button id="CCTool_Scripts_CheckYDChange" caption="检查现状规划用地变化" keytip="CYC" className="CCTool.Scripts.ShowCheckYDChange" loadOnClick="true" smallImage="Data/Images/Search16.png" largeImage="Data/Images/Search32.png">
+          <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
+        </button>
+        <button id="CCTool_Scripts_UI_ProButton_PolygonTopology" caption="面要素拓扑" keytip="PT" className="CCTool.Scripts.UI.ProButton.PolygonTopology" loadOnClick="true" smallImage="Data/Images/Topo16.png" largeImage="Data/Images/Topo32.png">
+          <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
+        </button>
+        <button id="CCTool_Scripts_UI_ProWindow_MergeSHP" caption="合并shp文件" keytip="MS" className="CCTool.Scripts.UI.ProWindow.ShowMergeSHP" loadOnClick="true" smallImage="Data/Images/MergeSHP16.png" largeImage="Data/Images/MergeSHP32.png">
+          <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
+        </button>
+        <button id="CCTool_Scripts_UI_ProWindow_AttributeMapper" caption="属性映射" keytip="AM" className="CCTool.Scripts.UI.ProWindow.ShowAttributeMapper" loadOnClick="true" smallImage="Data/Images/AttributeMapper16.png" largeImage="Data/Images/AttributeMapper32.png">
+          <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
+        </button>
+        <button id="CCTool_Scripts_UI_ProWindow_GetWord" caption="提取特定文字" keytip="GW" className="CCTool.Scripts.UI.ProWindow.ShowGetWord" loadOnClick="true" smallImage="Data/Images/FieldCalculation16.png" largeImage="Data/Images/FieldCalculation32.png">
+          <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
+        </button>
+        <button id="CCTool_Scripts_UI_ProWindow_StatisticsSD" caption="统计三调【三大类】" keytip="SS" className="CCTool.Scripts.UI.ProWindow.ShowStatisticsSD" loadOnClick="true" smallImage="Data/Images/StatisticsSD16.png" largeImage="Data/Images/StatisticsSD32.png">
+          <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
+        </button>
+        <button id="CCTool_Scripts_UI_ProWindow_DegreeChange" caption="度分秒转十进制度" keytip="DC" className="CCTool.Scripts.UI.ProWindow.ShowDegreeChange" loadOnClick="true" smallImage="Data/Images/GenericFlash16.png" largeImage="Data/Images/GenericFlash32.png">
+          <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
+        </button>
+        <button id="CCTool_Scripts_UI_ProWindow_ApplySymbologyYDYH" caption="应用符号系统" keytip="AS" className="CCTool.Scripts.UI.ProWindow.ShowApplySymbologyYDYH" loadOnClick="true" smallImage="Data/Images/GeostatisticalSurface16.png" largeImage="Data/Images/GeostatisticalSurface32.png">
+          <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
+        </button>
+        <button id="CCTool_Scripts_UI_ProWindow_FieldClear" caption="字段数据清洗" keytip="FC" className="CCTool.Scripts.UI.ProWindow.ShowFieldClear" loadOnClick="true" smallImage="Data/Images/GenericEraser16.png" largeImage="Data/Images/GenericEraser32.png">
+          <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
+        </button>
+        <button id="CCTool_Scripts_UI_ProWindow_AreaStatistics" caption="面积汇总" keytip="AS" className="CCTool.Scripts.UI.ProWindow.ShowAreaStatistics" loadOnClick="true" smallImage="Data/Images/StatisticsMU16.png" largeImage="Data/Images/StatisticsMU32.png">
+          <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
+        </button>
+        <button id="CCTool_Scripts_UI_ProWindow_TXT2GDB" caption="TXT文件转要素类" keytip="TG" className="CCTool.Scripts.UI.ProWindow.ShowTXT2GDB" loadOnClick="true" smallImage="Data/Images/FolderWithGISDataNew16.png" largeImage="Data/Images/FolderWithGISDataNew32.png">
+          <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
+        </button>
+        <button id="CCTool_Scripts_UI_ProButton_CloseLine" caption="线闭合" keytip="CL" className="CCTool.Scripts.UI.ProButton.CloseLine" loadOnClick="true" smallImage="Data/Images/ElementEditVertices16.png" largeImage="Data/Images/ElementEditVertices32.png">
+          <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
+        </button>
+        <button id="CCTool_Scripts_UI_ProWindow_AttributeMapperPlus" caption="属性映射(批量)" keytip="AMP" className="CCTool.Scripts.UI.ProWindow.ShowAttributeMapperPlus" loadOnClick="true" smallImage="Data/Images/AttributeMapper16.png" largeImage="Data/Images/AttributeMapper32.png">
+          <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
+        </button>
+        <button id="CCTool_Scripts_UI_ProButton_ShotID" caption="从上至下从左至右排序" keytip="SI" className="CCTool.Scripts.UI.ProButton.ShotID" loadOnClick="true" smallImage="Data/Images/GenericTag16.png" largeImage="Data/Images/GenericTag32.png">
+          <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
+        </button>
+        <button id="CCTool_Scripts_UI_ProWindow_UpdateGDB" caption="要素类追加至空库(批量)" keytip="UG" className="CCTool.Scripts.UI.ProWindow.ShowUpdateGDB" loadOnClick="true" smallImage="Data/Images/ToGDB16.png" largeImage="Data/Images/ToGDB32.png">
+          <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
+        </button>
+        <button id="CCTool_Scripts_UI_ProButton_VgCheckData" caption="村规_数据完整性检查" keytip="CD" className="CCTool.Scripts.UI.ProButton.VgCheckData" loadOnClick="true" smallImage="Data/Images/HostedServicesFolder16.png" largeImage="Data/Images/HostedServicesFolder32.png">
+          <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
+        </button>
+        <button id="CCTool_Scripts_UI_ProButton_VgCheckGeometry" caption="村规_要素几何检查" keytip="CG" className="CCTool.Scripts.UI.ProButton.VgCheckGeometry" loadOnClick="true" smallImage="Data/Images/CheckGeometry16.png" largeImage="Data/Images/CheckGeometry32.png">
+          <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
+        </button>
+        <button id="CCTool_Scripts_UI_ProButton_VgCreatCJDCQ" caption="1、创建村级调查区" keytip="CC" className="CCTool.Scripts.UI.ProButton.VgCreatCJDCQ" loadOnClick="true" smallImage="Data/Images/MergeSHP16.png" largeImage="Data/Images/MergeSHP32.png">
+          <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
+        </button>
+        <button id="CCTool_Scripts_UI_ProButton_VgCreateCJDCQJX" caption="2、创建村级调查区界线" keytip="CCJ" className="CCTool.Scripts.UI.ProButton.VgCreateCJDCQJX" loadOnClick="true" smallImage="Data/Images/MergeSHP16.png" largeImage="Data/Images/MergeSHP32.png">
+          <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
+        </button>
+        <button id="CCTool_Scripts_UI_ProButton_VgCreateJQDLTB" caption="3、创建基期地类图斑" keytip="CJ" className="CCTool.Scripts.UI.ProButton.VgCreateJQDLTB" loadOnClick="true" smallImage="Data/Images/MergeSHP16.png" largeImage="Data/Images/MergeSHP32.png">
+          <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
+        </button>
+        <button id="CCTool_Scripts_UI_ProButton_VgCreateGGJCSSD" caption="4、创建现状公服设施点" keytip="CG" className="CCTool.Scripts.UI.ProButton.VgCreateGGJCSSD" loadOnClick="true" smallImage="Data/Images/MergeSHP16.png" largeImage="Data/Images/MergeSHP32.png">
+          <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
+        </button>
+        <button id="CCTool_Scripts_UI_ProButton_VgCreateGHDLTB" caption="5、创建规划地类图斑" keytip="CGH" className="CCTool.Scripts.UI.ProButton.VgCreateGHDLTB" loadOnClick="true" smallImage="Data/Images/MergeSHP16.png" largeImage="Data/Images/MergeSHP32.png">
+          <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
+        </button>
+        <button id="CCTool_Scripts_UI_ProButton_VgCreateGHGGJCSSD" caption="6、创建规划公服设施点" keytip="CGG" className="CCTool.Scripts.UI.ProButton.VgCreateGHGGJCSSD" loadOnClick="true" smallImage="Data/Images/MergeSHP16.png" largeImage="Data/Images/MergeSHP32.png">
+          <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
+        </button>
+        <button id="CCTool_Scripts_UI_ProButton_VgCreateGKBJ" caption="7、创建管控边界" keytip="CGK" className="CCTool.Scripts.UI.ProButton.VgCreateGKBJ" loadOnClick="true" smallImage="Data/Images/MergeSHP16.png" largeImage="Data/Images/MergeSHP32.png">
+          <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
+        </button>
+        <button id="CCTool_Scripts_UI_ProButton_VgCreateLSWHBHQ" caption="8、创建历史文化保护区" keytip="CL" className="CCTool.Scripts.UI.ProButton.VgCreateLSWHBHQ" loadOnClick="true" smallImage="Data/Images/MergeSHP16.png" largeImage="Data/Images/MergeSHP32.png">
+          <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
+        </button>
+        <button id="CCTool_Scripts_UI_ProButton_TestButton" caption="不要点" keytip="TB" className="CCTool.Scripts.UI.ProButton.TestButton" loadOnClick="true" smallImage="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/GenericButtonBlue16.png" largeImage="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/GenericButtonBlue32.png">
+          <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
+        </button>
+        <button id="CCTool_Scripts_UI_ProButton_VgCreateAll" caption="村规_入库汇总" keytip="CF" className="CCTool.Scripts.UI.ProButton.VgCreateAll" loadOnClick="true" smallImage="Data/Images/Topo16.png" largeImage="Data/Images/Topo32.png">
+          <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
+        </button>
+        <button id="CCTool_Scripts_UI_ProButton_VgCreateGHZBB" caption="10、创建规划指标表" keytip="CG" className="CCTool.Scripts.UI.ProButton.VgCreateGHZBB" loadOnClick="true" smallImage="Data/Images/Excel16.png" largeImage="Data/Images/Excel32.png">
+          <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
+        </button>
+        <button id="CCTool_Scripts_UI_ProButton_VgCreateKJGNJGTZB" caption="9、创建空间功能结构调整表" keytip="CK" className="CCTool.Scripts.UI.ProButton.VgCreateKJGNJGTZB" loadOnClick="true" smallImage="Data/Images/Excel16.png" largeImage="Data/Images/Excel32.png">
+          <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
+        </button>
+        <button id="CCTool_Scripts_UI_ProWindow_StatisticsSDDL" caption="统计三调地类" keytip="SDD" className="CCTool.Scripts.UI.ProWindow.ShowStatisticsSDDL" loadOnClick="true" smallImage="Data/Images/StatisticsSD16.png" largeImage="Data/Images/StatisticsSD32.png">
+          <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
+        </button>
+        <button id="CCTool_Scripts_UI_ProButton_VgExcelKJGNJGTZB" caption="2、生成空间功能结构调整表" keytip="VEK" className="CCTool.Scripts.UI.ProButton.VgExcelKJGNJGTZB" loadOnClick="true" smallImage="Data/Images/GenericFlowChart16.png" largeImage="Data/Images/GenericFlowChart32.png">
+          <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
+        </button>
+        <button id="CCTool_Scripts_UI_ProButton_VgExcelGHZBB" caption="3、生成规划指标表" keytip="VEG" className="CCTool.Scripts.UI.ProButton.VgExcelGHZBB" loadOnClick="true" smallImage="Data/Images/GenericFlowChart16.png" largeImage="Data/Images/GenericFlowChart32.png">
+          <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
+        </button>
+        <button id="CCTool_Scripts_UI_ProButton_VgExcelXZTZB" caption="1、生成现状调整表" keytip="VEX" className="CCTool.Scripts.UI.ProButton.VgExcelXZTZB" loadOnClick="true" smallImage="Data/Images/GenericFlowChart16.png" largeImage="Data/Images/GenericFlowChart32.png">
+          <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
+        </button>
+        <button id="CCTool_Scripts_UI_ProButton_VgPictureXZT" caption="1、生成村域综合现状图" keytip="VEX" className="CCTool.Scripts.UI.ProButton.VgPictureXZT" loadOnClick="true" smallImage="Data/Images/Map16.png" largeImage="Data/Images/Map32.png">
+          <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
+        </button>
+        <button id="CCTool_Scripts_UI_ProButton_VgPictureGHT" caption="2、生成村域综合规划图" keytip="VEX" className="CCTool.Scripts.UI.ProButton.VgPictureGHT" loadOnClick="true" smallImage="Data/Images/Map16.png" largeImage="Data/Images/Map32.png">
+          <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
+        </button>
+        <button id="CCTool_Scripts_UI_ProButton_VgPictureGKBJT" caption="3、生成国土空间管制边界图" keytip="VEX" className="CCTool.Scripts.UI.ProButton.VgPictureGKBJT" loadOnClick="true" smallImage="Data/Images/Map16.png" largeImage="Data/Images/Map32.png">
+          <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
+        </button>
+        <button id="CCTool_Scripts_UI_ProButton_VgPictureAll" caption="村规_制图汇总" keytip="VEX" className="CCTool.Scripts.UI.ProButton.VgPictureAll" loadOnClick="true" smallImage="Data/Images/Maps16.png" largeImage="Data/Images/Maps32.png">
+          <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
+        </button>
+        <button id="CCTool_Scripts_UI_ProWindow_ExportLayout" caption="导出布局（批量）" keytip="EL" className="CCTool.Scripts.UI.ProWindow.ShowExportLayout" loadOnClick="true" smallImage="Data/Images/Maps16.png" largeImage="Data/Images/Maps32.png">
+          <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
+        </button>
+        <button id="CCTool_Scripts_UI_ProWindow_VgSetting" caption="村规设置" keytip="VS" className="CCTool.Scripts.UI.ProWindow.ShowVgSetting" loadOnClick="true" smallImage="Data/Images/GenericWrench_B16.png" largeImage="Data/Images/GenericWrench_B32.png">
+          <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
+        </button>
+        <button id="CCTool_Scripts_UI_ProButton_VgTableAll" caption="村规_制表汇总" keytip="VTL" className="CCTool.Scripts.UI.ProButton.VgTableAll" loadOnClick="true" smallImage="Data/Images/MapTiled16.png" largeImage="Data/Images/MapTiled32.png">
+          <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
+        </button>
+        <button id="CCTool_Scripts_UI_ProWindow_SD2YDYH" caption="三调转用地用海" keytip="SY" className="CCTool.Scripts.UI.ProWindow.ShowSD2YDYH" loadOnClick="true" smallImage="Data/Images/GeometricNetworkDisconnect16.png" largeImage="Data/Images/GeometricNetworkDisconnect32.png">
+          <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
+        </button>
+        <button id="CCTool_Scripts_UI_ProWindow_ExcelToEmptyGDB" caption="属性结构描述表转空库" keytip="EE" className="CCTool.Scripts.UI.ProWindow.ShowExcelToEmptyGDB" loadOnClick="true" smallImage="Data/Images/Excel16.png" largeImage="Data/Images/Excel32.png">
+          <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
+        </button>
+        <button id="CCTool_Scripts_UI_ProWindow_AddFields" caption="添加字段（批量）" keytip="AF" className="CCTool.Scripts.UI.ProWindow.ShowAddFields" loadOnClick="true" smallImage="Data/Images/AddFields16.png" largeImage="Data/Images/AddFields32.png">
+          <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
+        </button>
+        <button id="CCTool_Scripts_UI_ProWindow_ExportBoundaryPoints" caption="界址点导出Excel" keytip="EB" className="CCTool.Scripts.UI.ProWindow.ShowExportBoundaryPoints" loadOnClick="true" smallImage="Data/Images/BoundaryPoint16.png" largeImage="Data/Images/BoundaryPoint32.png">
+          <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
+        </button>
+        <button id="CCTool_Scripts_UI_ProButton_CreatePPT" caption="CreatePPT" keytip="PPT" className="CCTool.Scripts.UI.ProButton.CreatePPT" loadOnClick="true" smallImage="Data/Images/GraphManage16.png" largeImage="Data/Images/GraphManage32.png">
+          <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
+        </button>
+        <button id="CCTool_Scripts_UI_ProWindow_ExportLayoutByLayer" caption="按图层导出布局" keytip="EP" className="CCTool.Scripts.UI.ProWindow.ShowExportLayoutByLayer" loadOnClick="true" smallImage="Data/Images/GroupLayer16.png" largeImage="Data/Images/GroupLayer32.png">
+          <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
+        </button>
+        <button id="CCTool_Scripts_UI_ProButton_VGExcelGKFQ" caption="4、生成管控分区表" keytip="EG" className="CCTool.Scripts.UI.ProButton.VGExcelGKFQ" loadOnClick="true" smallImage="Data/Images/GenericFlowChart16.png" largeImage="Data/Images/GenericFlowChart32.png">
+          <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
+        </button>
+        <button id="CCTool_Scripts_UI_ProButton_MapVisibleLayer" caption="显示所有图层" keytip="MV" className="CCTool.Scripts.UI.ProButton.MapVisibleLayer" loadOnClick="true" smallImage="Data/Images/VissbleLayer16.png" largeImage="Data/Images/VissbleLayer32.png">
+          <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
+        </button>
+        <button id="CCTool_Scripts_UI_ProButton_MapUnVisibleLayer" caption="关闭所有图层" keytip="MU" className="CCTool.Scripts.UI.ProButton.MapUnVisibleLayer" loadOnClick="true" smallImage="Data/Images/UnVissbleLayer16.png" largeImage="Data/Images/UnVissbleLayer32.png">
+          <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
+        </button>
+        <button id="CCTool_Scripts_UI_ProWindow_UpdateAliasName" caption="更新字段别名(属性映射)" keytip="UF" className="CCTool.Scripts.UI.ProWindow.ShowUpdateAliasName" loadOnClick="true" smallImage="Data/Images/UpdataAlias16.png" largeImage="Data/Images/UpdataAlias32.png">
+          <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
+        </button>
+        <button id="CCTool_Scripts_UI_ProWindow_CheckYDChangePlus" caption="检查现状规划用地变化(按规范字段)" keytip="TDC" className="CCTool.Scripts.UI.ProWindow.ShowCheckYDChangePlus" loadOnClick="true" smallImage="Data/Images/Search16.png" largeImage="Data/Images/Search32.png">
+          <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
+        </button>
+        <button id="CCTool_Scripts_UI_ProWindow_CalculateFields" caption="批量计算字段" keytip="CF" className="CCTool.Scripts.UI.ProWindow.ShowCalculateFields" loadOnClick="true" smallImage="Data/Images/FieldCalculation16.png" largeImage="Data/Images/FieldCalculation32.png">
+          <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
+        </button>
+        <button id="CCTool_Scripts_UI_ProButton_ShotIDRD" caption="从下至上从右至左排序" keytip="SDID" className="CCTool.Scripts.UI.ProButton.ShotIDRD" loadOnClick="true" smallImage="Data/Images/GenericTag16.png" largeImage="Data/Images/GenericTag32.png">
+          <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
+        </button>
+        <button id="CCTool_Scripts_UI_ProWindow_CopyFields" caption="复制字段" keytip="CF" className="CCTool.Scripts.UI.ProWindow.ShowCopyFields" loadOnClick="true" smallImage="Data/Images/GenericTag16.png" largeImage="Data/Images/GenericTag32.png">
+          <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
+        </button>
+        <button id="CCTool_Scripts_UI_ProWindow_PHShp2Txt" caption="进出平衡@SHP转TXT" keytip="ST" className="CCTool.Scripts.UI.ProWindow.ShowPHShp2Txt" loadOnClick="true" smallImage="Data/Images/SHP2TXT16.png" largeImage="Data/Images/SHP2TXT32.png">
+          <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
+        </button>
+        <button id="CCTool_Scripts_UI_ProWindow_PHTxt2Shp" caption="进出平衡@TXT转SHP" keytip="TS" className="CCTool.Scripts.UI.ProWindow.ShowPHTxt2Shp" loadOnClick="true" smallImage="Data/Images/TXT2SHP16.png" largeImage="Data/Images/TXT2SHP32.png">
+          <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
+        </button>
+        <button id="CCTool_Scripts_UI_ProWindow_MultipleAnnatation" caption="多分式标注" keytip="MA" className="CCTool.Scripts.UI.ProWindow.ShowMultipleAnnatation" loadOnClick="true" smallImage="Data/Images/GenericMessage16.png" largeImage="Data/Images/GenericMessage32.png">
+          <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
+        </button>
+        <button id="CCTool_Scripts_UI_ProWindow_MergerCAD" caption="合并CAD文件(带文件名)" keytip="MC" className="CCTool.Scripts.UI.ProWindow.ShowMergerCAD" loadOnClick="true" smallImage="Data/Images/ViewThumbnails16.png" largeImage="Data/Images/ViewThumbnails32.png">
+          <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
+        </button>
+        <button id="CCTool_Scripts_UI_ProWindow_SortFeild" caption="字段排序" keytip="SF" className="CCTool.Scripts.UI.ProWindow.ShowSortFeild" loadOnClick="true" smallImage="Data/Images/GenericTag16.png" largeImage="Data/Images/GenericTag32.png">
+          <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
+        </button>
+        <button id="CCTool_Scripts_UI_ProWindow_MultiStaisticSD" caption="分地块统计三调地类" keytip="MSSD" className="CCTool.Scripts.UI.ProWindow.ShowMultiStaisticSD" loadOnClick="true" smallImage="Data/Images/StatisticsSD16.png" largeImage="Data/Images/StatisticsSD32.png">
+          <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
+        </button>
+        <button id="CCTool_Scripts_UI_SD_SDStatisticYD" caption="1、土地利用现状分类面积汇总表" keytip="SDY" className="CCTool.Scripts.UI.SD.ShowSDStatisticYD" loadOnClick="true" smallImage="Data/Images/StatisticsSD16.png" largeImage="Data/Images/StatisticsSD32.png">
+          <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
+        </button>
+        <button id="CCTool_Scripts_UI_SD_SDStatistic1" caption="2、土地利用现状一级分类面积汇总表" keytip="SS1" className="CCTool.Scripts.UI.SD.ShowSDStatistic1" loadOnClick="true" smallImage="Data/Images/StatisticsSD16.png" largeImage="Data/Images/StatisticsSD32.png">
+          <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
+        </button>
+        <button id="CCTool_Scripts_UI_ProWindow_GetCave" caption="处理要素空洞" keytip="FC" className="CCTool.Scripts.UI.ProWindow.ShowGetCave" loadOnClick="true" smallImage="Data/Images/Cave16.png" largeImage="Data/Images/Cave32.png">
+          <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
+        </button>
+        <button id="CCTool_Scripts_UI_SD_SDStatistic3" caption="3、土地利用现状三大类面积汇总表" keytip="FC" className="CCTool.Scripts.UI.SD.ShowSDStatistic3" loadOnClick="true" smallImage="Data/Images/StatisticsSD16.png" largeImage="Data/Images/StatisticsSD32.png">
+          <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
+        </button>
+        <tool id="CCTool_Scripts_UI_ProMapTool_GetMapCoordinates" caption="获取点坐标" keytip="GC" className="CCTool.Scripts.UI.ProMapTool.GetMapCoordinates" loadOnClick="true" smallImage="Data/Images/Check16.png" largeImage="Data/Images/Check32.png" condition="esri_mapping_mapPane">
+          <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
+        </tool>
+        <button id="CCTool_Scripts_UI_ProWindow_ClipGDB" caption="按范围裁剪gdb数据库" keytip="CG" className="CCTool.Scripts.UI.ProWindow.ShowClipGDB" loadOnClick="true" smallImage="Data/Images/Clipgdb16.png" largeImage="Data/Images/Clipgdb32.png">
+          <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
+        </button>
+        <tool id="CCTool_Scripts_UI_ProMapTool_HideLayer" caption="隐藏图层" keytip="HL" className="CCTool.Scripts.UI.ProMapTool.HideLayer" loadOnClick="true" smallImage="Data/Images/UnVissbleLayer16.png" largeImage="Data/Images/UnVissbleLayerb32.png" condition="esri_mapping_mapPane">
+          <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
+        </tool>
+        <tool id="CCTool_Scripts_UI_ProMapTool_KeepLayer" caption="隔离图层" keytip="KL" className="CCTool.Scripts.UI.ProMapTool.KeepLayer" loadOnClick="true" smallImage="Data/Images/VissbleLayer16.png" largeImage="Data/Images/VissbleLayer32.png" condition="esri_mapping_mapPane">
+          <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
+        </tool>
+        <button id="CCTool_Scripts_UI_ProButton_TestButton2" caption="也不要点" keytip="TEST" className="CCTool.Scripts.UI.ProButton.TestButton2" loadOnClick="true" smallImage="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/GenericButtonBlue16.png" largeImage="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/GenericButtonBlue32.png">
+          <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
+        </button>
+        <tool id="CCTool_Scripts_UI_ProMapTool_TestMapTool" caption="TestMapTool" keytip="TT" className="CCTool.Scripts.UI.ProMapTool.TestMapTool" loadOnClick="true" smallImage="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/GenericButtonRed16.png" largeImage="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/GenericButtonRed32.png" condition="esri_mapping_mapPane">
+          <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
+        </tool>
+        <tool id="CCTool_Scripts_UI_ProMapTool_FeatureCounter" caption="要素计数器" keytip="FC" className="CCTool.Scripts.UI.ProMapTool.FeatureCounter" loadOnClick="true" smallImage="Data/Images/LasDatasetPoints16.png" largeImage="Data/Images/LasDatasetPoints32.png" condition="esri_mapping_mapPane">
+          <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
+        </tool>
+        <button id="CCTool_Scripts_UI_ProButton_PolygonExtent" caption="面要素计算四至" keytip="PE" className="CCTool.Scripts.UI.ProButton.PolygonExtent" loadOnClick="true" smallImage="Data/Images/Extent16.png" largeImage="Data/Images/Extent32.png">
+          <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
+        </button>
+        <button id="CCTool_Scripts_Attribute_FieldMix_AddLayerNameToField" caption="添加图层名和路径到字段" keytip="AF" className="CCTool.Scripts.Attribute.FieldMix.ShowAddLayerNameToField" loadOnClick="true" smallImage="Data/Images/TabletPC16.png" largeImage="Data/Images/TabletPC32.png">
+          <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
+        </button>
+        <button id="CCTool_Scripts_LayerPross_PolylineTopology" caption="线要素拓扑" keytip="LT" className="CCTool.Scripts.LayerPross.PolylineTopology" loadOnClick="true" smallImage="Data/Images/ElementLine16.png" largeImage="Data/Images/ElementLine32.png">
+          <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
+        </button>
+        <button id="CCTool_Scripts_GHApp_SD_SDStatisticYDHori" caption="1、土地利用现状分类面积汇总表(竖版)" keytip="YDY" className="CCTool.Scripts.GHApp.SD.ShowSDStatisticYDHori" loadOnClick="true" smallImage="Data/Images/StatisticsSD16.png" largeImage="Data/Images/StatisticsSD32.png">
+          <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
+        </button>
+        <button id="CCTool_Scripts_Attribute_FieldFloat_CalculateArea" caption="计算面积" keytip="CA" className="CCTool.Scripts.Attribute.FieldFloat.ShowCalculateArea" loadOnClick="true" smallImage="Data/Images/EditingEditShape16.png" largeImage="Data/Images/EditingEditShape32.png">
+          <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
+        </button>
+        <button id="CCTool_Scripts_DataPross_SHP_SHP2KML" caption="SHP转KML文件" keytip="SK" className="CCTool.Scripts.DataPross.SHP.ShowSHP2KML" loadOnClick="true" smallImage="Data/Images/EffectsDim16.png" largeImage="Data/Images/EffectsDim32.png">
+          <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
+        </button>
+        <button id="CCTool_Scripts_MiniTool_Domain2IP" caption="把域名解析为IP" keytip="DP" className="CCTool.Scripts.MiniTool.ShowDomain2IP" loadOnClick="true" smallImage="Data/Images/Domain16.png" largeImage="Data/Images/Domain32.png">
+          <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
+        </button>
+        <button id="CCTool_Scripts_DataPross_Excel_Excel2JPG" caption="Excel导出图片" keytip="EJ" className="CCTool.Scripts.DataPross.Excel.ShowExcel2JPG" loadOnClick="true" smallImage="Data/Images/RasterImageAnalysisNDVI16.png" largeImage="Data/Images/RasterImageAnalysisNDVI32.png">
+          <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
+        </button>
+        <button id="CCTool_Scripts_DataPross_TXT_GDB2TXT" caption="SHP要素转TXT" keytip="ST" className="CCTool.Scripts.DataPross.TXT.ShowGDB2TXT" loadOnClick="true" smallImage="Data/Images/FolderWithGISDataNew16.png" largeImage="Data/Images/FolderWithGISDataNew32.png">
+          <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
+        </button>
+        <button id="CCTool_Scripts_MiniTool_GetInfo_InfoFields" caption="获取所有字段信息" keytip="IF" className="CCTool.Scripts.MiniTool.GetInfo.ShowInfoFields" loadOnClick="true" smallImage="Data/Images/GetInfomation.png" largeImage="Data/Images/GetInfomation.png">
+          <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
+        </button>
+        <button id="CCTool_Scripts_MiniTool_GetInfo_InfoFieldValue" caption="获取字段的所有唯一值" keytip="IV" className="CCTool.Scripts.MiniTool.GetInfo.ShowInfoFieldValue" loadOnClick="true" smallImage="Data/Images/GetInfomation.png" largeImage="Data/Images/GetInfomation.png">
+          <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
+        </button>
+        <button id="CCTool_Scripts_MiniTool_GetInfo_InfoMapPoints" caption="获取界址点信息" keytip="IM" className="CCTool.Scripts.MiniTool.GetInfo.ShowInfoMapPoints" loadOnClick="true" smallImage="Data/Images/GetInfomation.png" largeImage="Data/Images/GetInfomation.png">
+          <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
+        </button>
+        <button id="CCTool_Scripts_MiniTool_GetInfo_InfoLayer" caption="获取当前地图内的图层" keytip="IL" className="CCTool.Scripts.MiniTool.GetInfo.ShowInfoLayer" loadOnClick="true" smallImage="Data/Images/GetInfomation.png" largeImage="Data/Images/GetInfomation.png">
+          <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
+        </button>
+        <button id="CCTool_Scripts_MiniTool_MTool_CodeMaker" caption="二维码生成器" keytip="QR" className="CCTool.Scripts.MiniTool.MTool.ShowCodeMaker" loadOnClick="true" smallImage="Data/Images/QRCode16.png" largeImage="Data/Images/QRCode32.png">
+          <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
+        </button>
+        <button id="CCTool_Scripts_DataPross_GDB_MergeGDB" caption="合并gdb数据库" keytip="MG" className="CCTool.Scripts.DataPross.GDB.ShowMergeGDB" loadOnClick="true" smallImage="Data/Images/GeodatabaseAddNew16.png" largeImage="Data/Images/GeodatabaseAddNew32.png">
+          <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
+        </button>
+        <button id="CCTool_Scripts_DataPross_FeatureClasses_ClearFeatureClassZM" caption="清除ZM值" keytip="ZM" className="CCTool.Scripts.DataPross.FeatureClasses.ShowClearFeatureClassZM" loadOnClick="true" smallImage="Data/Images/ClearZM16.png" largeImage="Data/Images/ClearZM32.png">
+          <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
+        </button>
+        <button id="CCTool_Scripts_DataPross_FeatureClasses_AdjustmentsTool" caption="平差工具" keytip="ADT" className="CCTool.Scripts.DataPross.FeatureClasses.ShowAdjustmentsTool" loadOnClick="true" smallImage="Data/Images/Adjustment16.png" largeImage="Data/Images/Adjustment32.png">
+          <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
+        </button>
+        <button id="CCTool_Scripts_MiniTool_MTool_String2Unicode" caption="汉字转为Unicode" keytip="SU" className="CCTool.Scripts.MiniTool.MTool.ShowString2Unicode" loadOnClick="true" smallImage="Data/Images/ElementSplinedText16.png" largeImage="Data/Images/ElementSplinedText32.png">
+          <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
+        </button>
+        <button id="CCTool_Scripts_GHApp_YDYH_UpdataYDYH" caption="赋值用地用海编码和名称" keytip="UY" className="CCTool.Scripts.GHApp.YDYH.ShowUpdataYDYH" loadOnClick="true" smallImage="Data/Images/TextDynamic16.png" largeImage="Data/Images/TextDynamic32.png">
+          <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
+        </button>
+        <button id="CCTool_Scripts_DataPross_FeatureClasses_IdentityAsMax" caption="按最大面积标识" keytip="IM" className="CCTool.Scripts.DataPross.FeatureClasses.ShowIdentityAsMax" loadOnClick="true" smallImage="Data/Images/LayerProperties16.png" largeImage="Data/Images/LayerProperties32.png">
+          <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
+        </button>
+        <button id="CCTool_Scripts_DataPross_Excel_ExportBoundaryPointsByCustom" caption="界址点导出Excel(私人定制版，不通用)" keytip="EP" className="CCTool.Scripts.DataPross.Excel.ShowExportBoundaryPointsByCustom" loadOnClick="true" smallImage="Data/Images/BoundaryPoint16.png" largeImage="Data/Images/BoundaryPoint32.png">
+          <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
+        </button>
+        <button id="CCTool_Scripts_DataPross_FeatureClasses_AttributeReader" caption="属性读取" keytip="AR" className="CCTool.Scripts.DataPross.FeatureClasses.ShowAttributeReader" loadOnClick="true" smallImage="Data/Images/LayerProperties16.png" largeImage="Data/Images/LayerProperties32.png">
+          <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
+        </button>
+        <button id="CCTool_Scripts_DataPross_GDB_MDB2GDB" caption="MDB转GDB" keytip="MDB" className="CCTool.Scripts.DataPross.GDB.ShowMDB2GDB" loadOnClick="true" smallImage="Data/Images/mdb2gdb16.png" largeImage="Data/Images/mdb2gdb32.png">
+          <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
+        </button>
+        <button id="CCTool_Scripts_GHApp_YDYH_YDYHOld2New" caption="用地用海旧转新" keytip="ON" className="CCTool.Scripts.GHApp.YDYH.ShowYDYHOld2New" loadOnClick="true" smallImage="Data/Images/GenericWorkflowColor16.png" largeImage="Data/Images/GenericWorkflowColor32.png">
+          <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
+        </button>
+        <button id="CCTool_Scripts_DataPross_Excel_SetBoundaryPointsFromNW" caption="设置界址点从西北角开始" keytip="NW" className="CCTool.Scripts.DataPross.Excel.ShowSetBoundaryPointsFromNW" loadOnClick="true" smallImage="Data/Images/BoundaryPoint16.png" largeImage="Data/Images/BoundaryPoint32.png">
+          <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
+        </button>
+        <button id="CCTool_Scripts_DataPross_Excel_Polygon2BoundaryPoint" caption="面要素导出界址点要素" keytip="P2P" className="CCTool.Scripts.DataPross.Excel.ShowPolygon2BoundaryPoint" loadOnClick="true" smallImage="Data/Images/BoundaryPoint16.png" largeImage="Data/Images/BoundaryPoint32.png">
+          <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
+        </button>
+        <button id="CCTool_Scripts_MiniTool_BUGRepair_RepairSHPLength" caption="SHP字段名长度设置为10(5个汉字)" keytip="SHP" className="CCTool.Scripts.MiniTool.BUGRepair.RepairSHPLength" loadOnClick="true" smallImage="Data/Images/bug16.png" largeImage="Data/Images/bug32.png">
+          <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
+        </button>
+      </controls>
+    </insertModule>
+    <!--更新系统自带的工具菜单、工具栏等-->
+    <updateModule refID="esri_mapping">
+      <menus>
+        <!--选择要素的右键菜单-->
+        <updateMenu refID="esri_mapping_selection2DContextMenu">
+          <insertMenu refID="CCTool_Scripts_Selection_Menu" insert="before" placeWith="esri_core_editCopyButton" separator="false" />
+        </updateMenu>
+        <!--图层的右键菜单-->
+        <updateMenu refID="esri_mapping_layerContextMenu">
+          <insertMenu refID="CCTool_Scripts_UI_ProMenu_FeatureClass_Menu" insert="before" placeWith="esri_mapping_copySelectedLayersButton" separator="false" />
+        </updateMenu>
+        <!--图层的右键菜单（SHP）-->
+        <updateMenu refID="esri_mapping_unregisteredLayerContextMenu">
+          <insertMenu refID="CCTool_Scripts_UI_ProMenu_FeatureClass_Menu" insert="before" placeWith="esri_mapping_copySelectedLayersButton" separator="false" />
+        </updateMenu>
+        <!--地图框的右键菜单-->
+        <updateMenu refID="esri_mapping_mapContextMenu">
+          <insertMenu refID="CCTool_Scripts_UI_ProMenu_Map_Menu" insert="before" placeWith="esri_mapping_addDataButton" separator="false" />
+        </updateMenu>
+      </menus>
+    </updateModule>
+  </modules>
+</ArcGIS>
